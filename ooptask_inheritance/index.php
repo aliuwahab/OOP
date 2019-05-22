@@ -5,7 +5,7 @@ include_once 'oilService.php';
 include_once 'tireRotation.php';
 
 //Faiq is interested in Basic Inspection;
-$carServiceObj = new carServices\basicService(50);
+$carServiceObj = new App\basicService(50);
 $basicServicePrice = $carServiceObj->getBasicPrice();
 echo "Faiq is interested in Basic Inspection: ".$basicServicePrice.'<br/>';
 
@@ -13,13 +13,13 @@ echo "Faiq is interested in Basic Inspection: ".$basicServicePrice.'<br/>';
 
 //Eshaan is interested in carrying out Oil Change;
 
-$oilServiceObj = new carServices\oilService(85);
+$oilServiceObj = new App\oilService(85);
 $oilTotalCost  = $basicServicePrice + $oilServiceObj->getoilServicePrice();
 echo "Eshaan is interested in carrying out Oil Change: ".$oilTotalCost."<br/>";
 
 
 //Aliu is interested in carrying out Tire Rotation;
-$tireServiceObj = new carServices\tireRotation(23.5);
+$tireServiceObj = new App\tireRotation(23.5);
 $tireserviceRotationCost = $tireServiceObj->gettireRotationServicePriceServicePrice();
 $totalTireServiceCost = $basicServicePrice+  $tireserviceRotationCost;
 echo "Aliu is interested in carrying out Tire Rotation: ". $totalTireServiceCost."<br/>";
