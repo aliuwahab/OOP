@@ -1,6 +1,6 @@
 <?php
 
- namespace carServices;
+ namespace App;
  
  class basicService {
 	 private $price;

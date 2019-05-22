@@ -1,7 +1,6 @@
 <?php
-namespace carServices;
-
-include_once 'baseService.php';
+namespace App;
+use App\basicService;
 
 
 //Tire rotation child Class
